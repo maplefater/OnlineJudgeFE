@@ -2,10 +2,10 @@
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
       <div class="logo"><span>{{website.website_name}}</span></div>
-      <Menu-item name="/">
-        <Icon type="home"></Icon>
-        Home
-      </Menu-item>
+      <!--<Menu-item name="/">-->
+        <!--<Icon type="home"></Icon>-->
+        <!--Home-->
+      <!--</Menu-item>-->
       <Menu-item name="/problems">
         <Icon type="ios-keypad"></Icon>
         Problems
@@ -14,22 +14,22 @@
         <Icon type="trophy"></Icon>
         Contests
       </Menu-item>
-      <Menu-item name="/status">
-        <Icon type="ios-pulse-strong"></Icon>
-        Status
-      </Menu-item>
-      <Submenu name="">
-        <template slot="title">
-          <Icon type="podium"></Icon>
-          Rank
-        </template>
-        <Menu-item name="/acm-rank">
-          ACM Rank
-        </Menu-item>
-        <Menu-item name="/oi-rank">
-          OI Rank
-        </Menu-item>
-      </Submenu>
+      <!--<Menu-item name="/status">-->
+        <!--<Icon type="ios-pulse-strong"></Icon>-->
+        <!--Status-->
+      <!--</Menu-item>-->
+      <!--<Submenu name="">-->
+        <!--<template slot="title">-->
+          <!--<Icon type="podium"></Icon>-->
+          <!--Rank-->
+        <!--</template>-->
+        <!--<Menu-item name="/acm-rank">-->
+          <!--ACM Rank-->
+        <!--</Menu-item>-->
+        <!--<Menu-item name="/oi-rank">-->
+          <!--OI Rank-->
+        <!--</Menu-item>-->
+      <!--</Submenu>-->
       <Submenu name="">
         <template slot="title">
           <Icon type="information-circled"></Icon>
