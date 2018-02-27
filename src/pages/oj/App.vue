@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!--<NavBar></NavBar>-->
+    <NavBar v-if="isAdminRole || !isAuthenticated"></NavBar>
     <div class="content-app">
       <transition name="fadeInUp" mode="out-in">
         <router-view></router-view>
@@ -43,7 +43,7 @@
       ...mapActions(['getWebsiteConfig', 'changeDomTitle'])
     },
     computed: {
-      ...mapState(['website'])
+      ...mapState(['website', 'isAdminRole', 'isAuthenticated'])
     },
     watch: {
       'website' () {
