@@ -1,16 +1,16 @@
 <template>
   <div>
-    <NavBar></NavBar>
+    <!--<NavBar></NavBar>-->
     <div class="content-app">
       <transition name="fadeInUp" mode="out-in">
         <router-view></router-view>
       </transition>
-      <div class="footer">
-        <p v-html="website.website_footer"></p>
-        <p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>
-          <span v-if="version">&nbsp; Version: {{ version }}</span>
-        </p>
-      </div>
+      <!--<div class="footer">-->
+        <!--<p v-html="website.website_footer"></p>-->
+        <!--<p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>-->
+          <!--<span v-if="version">&nbsp; Version: {{ version }}</span>-->
+        <!--</p>-->
+      <!--</div>-->
     </div>
     <BackTop></BackTop>
   </div>
