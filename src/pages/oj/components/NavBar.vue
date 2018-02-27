@@ -92,6 +92,10 @@
     },
     mounted () {
       this.getProfile()
+      if (window.top === window) {
+        document.getElementById('header').style.height = '60px'
+        document.querySelectorAll('.content-app')[0].style.marginTop = '80px'
+      }
     },
     methods: {
       ...mapActions(['getProfile', 'changeModalStatus']),
