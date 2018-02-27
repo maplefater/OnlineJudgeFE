@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar v-if="isAdminRole || !isAuthenticated"></NavBar>
+    <NavBar></NavBar>
     <div class="content-app">
       <transition name="fadeInUp" mode="out-in">
         <router-view></router-view>
