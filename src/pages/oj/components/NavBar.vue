@@ -134,9 +134,8 @@
     top: 0;
     left: 0;
     /*height: 60px;*/
-    /*width: 100%;*/
-    width:0;
     height:0;
+    width: 100%;
     z-index: 1000;
     background-color: #fff;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
