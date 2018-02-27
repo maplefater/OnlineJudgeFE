@@ -6,10 +6,10 @@
         <router-view></router-view>
       </transition>
       <!--<div class="footer">-->
-        <!--<p v-html="website.website_footer"></p>-->
-        <!--<p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>-->
-          <!--<span v-if="version">&nbsp; Version: {{ version }}</span>-->
-        <!--</p>-->
+      <!--<p v-html="website.website_footer"></p>-->
+      <!--<p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>-->
+      <!--<span v-if="version">&nbsp; Version: {{ version }}</span>-->
+      <!--</p>-->
       <!--</div>-->
     </div>
     <BackTop></BackTop>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import { mapActions, mapState } from 'vuex'
+  import {mapActions, mapState} from 'vuex'
   import NavBar from '@oj/components/NavBar.vue'
 
   export default {
@@ -25,18 +25,18 @@
     components: {
       NavBar
     },
-    data () {
+    data() {
       return {
         version: process.env.VERSION
       }
     },
-    created () {
+    created() {
       try {
         document.body.removeChild(document.getElementById('app-loader'))
       } catch (e) {
       }
     },
-    mounted () {
+    mounted() {
       this.getWebsiteConfig()
     },
     methods: {
@@ -46,10 +46,10 @@
       ...mapState(['website'])
     },
     watch: {
-      'website' () {
+      'website'() {
         this.changeDomTitle()
       },
-      '$route' () {
+      '$route'() {
         this.changeDomTitle()
       }
     }
@@ -72,9 +72,9 @@
     }
   }
 
-
   .content-app {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
+    margin-top: 25px;
     padding: 0 2%;
   }
 
