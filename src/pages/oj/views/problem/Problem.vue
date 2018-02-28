@@ -105,7 +105,7 @@
 
           <VerticalMenu-item :route="{name: 'contest-announcement-list', params: {contestID: contestID}}">
             <Icon type="chatbubble-working"></Icon>
-            公告列表
+            公告
           </VerticalMenu-item>
         </template>
 
@@ -376,7 +376,7 @@
       },
       submitCode () {
         if (this.code.trim() === '') {
-          this.$error('Code can not be empty')
+          this.$error('代码不能为空')
           return
         }
         this.submissionId = ''
@@ -401,7 +401,7 @@
             if (!detailsVisible) {
               this.$Modal.success({
                 title: 'Success',
-                content: 'Submit code successfully'
+                content: '提交代码成功'
               })
               return
             }

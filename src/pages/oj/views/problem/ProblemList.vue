@@ -11,10 +11,10 @@
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">全部</Dropdown-item>
-                <Dropdown-item name="Low">低</Dropdown-item>
-                <Dropdown-item name="Mid">中</Dropdown-item>
-                <Dropdown-item name="High">高</Dropdown-item>
+                <Dropdown-item name="">All</Dropdown-item>
+                <Dropdown-item name="Low">Low</Dropdown-item>
+                <Dropdown-item name="Mid">Mid</Dropdown-item>
+                <Dropdown-item name="High">High</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -109,7 +109,7 @@
             }
           },
           {
-            title: 'Title',
+            title: '标题',
             width: '35%',
             render: (h, params) => {
               return h('Button', {
@@ -129,7 +129,7 @@
             }
           },
           {
-            title: 'Level',
+            title: '难度',
             render: (h, params) => {
               let t = params.row.difficulty
               let color = 'blue'
@@ -143,11 +143,11 @@
             }
           },
           {
-            title: 'Total',
+            title: '总提交数',
             key: 'submission_number'
           },
           {
-            title: 'AC Rate',
+            title: 'AC率',
             render: (h, params) => {
               return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
             }

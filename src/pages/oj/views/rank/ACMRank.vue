@@ -42,7 +42,7 @@
             }
           },
           {
-            title: 'user',
+            title: '用户',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -73,7 +73,7 @@
             key: 'accepted_number'
           },
           {
-            title: 'Total',
+            title: '提交数',
             align: 'center',
             key: 'submission_number'
           },
@@ -138,7 +138,7 @@
               }
             },
             {
-              name: 'Total',
+              name: '提交数',
               type: 'bar',
               data: [0],
               markPoint: {

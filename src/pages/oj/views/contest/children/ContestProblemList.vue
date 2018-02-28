@@ -33,15 +33,15 @@
             width: 150
           },
           {
-            title: 'Title',
+            title: '题目',
             key: 'title'
           },
           {
-            title: 'Total',
+            title: '提交数',
             key: 'submission_number'
           },
           {
-            title: 'AC Rate',
+            title: 'AC率',
             render: (h, params) => {
               return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
             }
@@ -54,7 +54,7 @@
             width: 150
           },
           {
-            title: 'Title',
+            title: '题目',
             key: 'title'
           }
         ]

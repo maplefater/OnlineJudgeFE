@@ -7,9 +7,9 @@
         <Icon type="android-settings" size="20"></Icon>
         <div slot="content" id="switches">
           <p>
-            <span>列表形式</span>
+            <span>侧边栏</span>
             <i-switch v-model="showMenu"></i-switch>
-            <span>图表形式</span>
+            <span>图表</span>
             <i-switch v-model="showChart"></i-switch>
           </p>
           <p>

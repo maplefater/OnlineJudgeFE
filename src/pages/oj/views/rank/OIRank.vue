@@ -41,7 +41,7 @@
             }
           },
           {
-            title: 'user',
+            title: '用户',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -67,7 +67,7 @@
             key: 'mood'
           },
           {
-            title: 'Score',
+            title: '分数',
             align: 'center',
             key: 'total_score'
           },
@@ -77,7 +77,7 @@
             key: 'accepted_number'
           },
           {
-            title: 'Total',
+            title: '提交数',
             align: 'center',
             key: 'submission_number'
           },

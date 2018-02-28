@@ -43,7 +43,7 @@
         <VerticalMenu-item :disabled="contestMenuDisabled"
                            :route="{name: 'contest-announcement-list', params: {contestID: contestID}}">
           <Icon type="chatbubble-working"></Icon>
-          公告列表
+          公告
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="OIContestRealTimePermission"
@@ -95,27 +95,27 @@
         contestPassword: '',
         columns: [
           {
-            title: 'StartAt',
+            title: '开始时间',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.start_time))
             }
           },
           {
-            title: 'EndAt',
+            title: '结束时间',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.end_time))
             }
           },
           {
-            title: 'ContestType',
+            title: '试卷类型',
             key: 'contest_type'
           },
           {
-            title: 'Rule',
+            title: '规则',
             key: 'rule_type'
           },
           {
-            title: 'Creator',
+            title: '创建人',
             render: (h, data) => {
               return h('span', data.row.created_by.username)
             }

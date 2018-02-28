@@ -84,7 +84,7 @@
             }
           },
           {
-            title: 'RealName',
+            title: '真实姓名',
             align: 'center',
             render: (h, {row}) => {
               return h('span', {
