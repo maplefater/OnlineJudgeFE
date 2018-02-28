@@ -234,7 +234,7 @@
         if (value) {
           this.problemTableColumns.push(
             {
-              title: 'Tags',
+              title: '标签',
               align: 'center',
               width: '200px',
               render: (h, params) => {

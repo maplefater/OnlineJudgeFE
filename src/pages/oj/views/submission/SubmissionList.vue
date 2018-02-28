@@ -149,7 +149,7 @@
             key: 'language'
           },
           {
-            title: '作者',
+            title: '用户',
             align: 'center',
             render: (h, params) => {
               return h('a', {

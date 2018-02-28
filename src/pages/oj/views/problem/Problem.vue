@@ -142,7 +142,7 @@
             <p>内存限制</p>
             <p>{{problem.memory_limit}}MB</p></li>
           <li>
-            <p>由该用户创建:</p>
+            <p>创建者</p>
             <p>{{problem.created_by.username}}</p></li>
           <li v-if="problem.difficulty">
             <p>级别</p>
