@@ -8,10 +8,10 @@
           <pre>{{submission.statistic_info.err_info}}</pre>
         </template>
         <template v-else>
-          <span>Time: {{submission.statistic_info.time_cost | submissionTime}}</span>
-          <span>Memory: {{submission.statistic_info.memory_cost | submissionMemory}}</span>
-          <span>Lang: {{submission.language}}</span>
-          <span>Author: {{submission.username}}</span>
+          <span>时间: {{submission.statistic_info.time_cost | submissionTime}}</span>
+          <span>内存: {{submission.statistic_info.memory_cost | submissionMemory}}</span>
+          <span>语言: {{submission.language}}</span>
+          <span>作者: {{submission.username}}</span>
         </template>
       </div>
     </Alert>
@@ -22,7 +22,7 @@
     <Alert type="warning">
       <div class="admin-info-content">
         <Icon type="information-circled" color="#f90"></Icon>
-        <span class="admin-info-content">Only admin can check the test_case details in ACM problems.</span>
+        <span class="admin-info-content">只有管理员可以在ACM题目中查看测试用例详情.</span>
       </div>
     </Alert>
     <Table stripe :loading="loading" :disabled-hover="true" :columns="columns" :data="submission.info.data"></Table>

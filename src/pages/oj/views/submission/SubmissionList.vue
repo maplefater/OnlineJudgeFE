@@ -31,7 +31,7 @@
             </li>
 
             <li>
-              <Button type="info" icon="refresh" @click="getSubmissions">Refresh</Button>
+              <Button type="info" icon="refresh" @click="getSubmissions">刷新</Button>
             </li>
           </ul>
         </div>

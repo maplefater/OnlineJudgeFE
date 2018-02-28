@@ -5,19 +5,19 @@
       <Panel :padding="40" shadow>
         <div slot="title">{{problem.title}}</div>
         <div id="problem-content" class="markdown-body">
-          <p class="title">Description</p>
+          <p class="title">描述</p>
           <p class="content" v-html=problem.description></p>
 
-          <p class="title">Input</p>
+          <p class="title">输入描述</p>
           <p class="content" v-html=problem.input_description></p>
 
-          <p class="title">Output</p>
+          <p class="title">输出描述</p>
           <p class="content" v-html=problem.output_description></p>
 
           <div v-for="sample, index in problem.samples">
             <div class="flex-container sample">
               <div class="sample-input">
-                <p class="title">Sample Input {{index + 1}}
+                <p class="title">样例输入 {{index + 1}}
                   <a class="copy"
                      v-clipboard:copy="sample.input"
                      v-clipboard:success="onCopy"
@@ -28,21 +28,21 @@
                 <pre>{{sample.input}}</pre>
               </div>
               <div class="sample-output">
-                <p class="title">Sample Output {{index + 1}}</p>
+                <p class="title">样例输出 {{index + 1}}</p>
                 <pre>{{sample.output}}</pre>
               </div>
             </div>
           </div>
 
           <div v-if="problem.hint">
-            <p class="title">Hint</p>
+            <p class="title">提示</p>
             <Card dis-hover>
               <div class="content" v-html=problem.hint></div>
             </Card>
           </div>
 
           <div v-if="problem.source">
-            <p class="title">Source</p>
+            <p class="title">题目来源</p>
             <p class="content">{{problem.source}}</p>
           </div>
 
@@ -62,17 +62,17 @@
               </Tag>
             </template>
             <template v-else-if="this.contestID && !OIContestRealTimePermission">
-              <Alert type="success" show-icon>Submitted successfully</Alert>
+              <Alert type="success" show-icon>提交成功</Alert>
             </template>
           </div>
           <div v-else-if="problem.my_status === 0">
-            <Alert type="success" show-icon>You have solved the problem</Alert>
+            <Alert type="success" show-icon>你已经通过该题</Alert>
           </div>
           <div v-else-if="this.contestID && !OIContestRealTimePermission && submissionExists">
-            <Alert type="success" show-icon>You have submitted a solution.</Alert>
+            <Alert type="success" show-icon>你曾提交过该题</Alert>
           </div>
           <div v-if="contestEnded">
-            <Alert type="warning" show-icon>Contest has ended</Alert>
+            <Alert type="warning" show-icon>该场测试已结束</Alert>
           </div>
           </Col>
 
@@ -87,8 +87,8 @@
           </template>
           <Button type="warning" icon="edit" :loading="submitting" @click="submitCode" :disabled="problemSubmitDisabled"
                   class="fl-right">
-            <span v-if="!submitting">Submit</span>
-            <span v-else>Submitting</span>
+            <span v-if="!submitting">提交</span>
+            <span v-else>正在提交...</span>
           </Button>
           </Col>
         </Row>
@@ -100,29 +100,29 @@
         <template v-if="this.contestID">
           <VerticalMenu-item :route="{name: 'contest-problem-list', params: {contestID: contestID}}">
             <Icon type="ios-photos"></Icon>
-            Problems
+            问题列表
           </VerticalMenu-item>
 
           <VerticalMenu-item :route="{name: 'contest-announcement-list', params: {contestID: contestID}}">
             <Icon type="chatbubble-working"></Icon>
-            Announcements
+            公告列表
           </VerticalMenu-item>
         </template>
 
         <VerticalMenu-item v-if="!this.contestID || OIContestRealTimePermission" :route="submissionRoute">
           <Icon type="navicon-round"></Icon>
-          Submissions
+          提交列表
         </VerticalMenu-item>
 
         <template v-if="this.contestID">
           <VerticalMenu-item v-if="!this.contestID || OIContestRealTimePermission"
                              :route="{name: 'contest-rank', params: {contestID: contestID}}">
             <Icon type="stats-bars"></Icon>
-            Rankings
+            总排名
           </VerticalMenu-item>
           <VerticalMenu-item :route="{name: 'contest-details', params: {contestID: contestID}}">
             <Icon type="home"></Icon>
-            View Contest
+            查看试卷
           </VerticalMenu-item>
         </template>
       </VerticalMenu>
@@ -130,29 +130,29 @@
       <Card id="info">
         <div slot="title" class="header">
           <Icon type="information-circled"></Icon>
-          <span class="card-title">Information</span>
+          <span class="card-title">题目信息</span>
         </div>
         <ul>
           <li><p>ID</p>
             <p>{{problem._id}}</p></li>
           <li>
-            <p>Time Limit</p>
+            <p>时间限制</p>
             <p>{{problem.time_limit}}MS</p></li>
           <li>
-            <p>Memory Limit</p>
+            <p>内存限制</p>
             <p>{{problem.memory_limit}}MB</p></li>
           <li>
-            <p>Created By</p>
+            <p>由该用户创建:</p>
             <p>{{problem.created_by.username}}</p></li>
           <li v-if="problem.difficulty">
-            <p>Level</p>
+            <p>级别</p>
             <p>{{problem.difficulty}}</p></li>
           <li v-if="problem.total_score">
-            <p>Score</p>
+            <p>分值</p>
             <p>{{problem.total_score}}</p>
           </li>
           <li>
-            <p>Tags</p>
+            <p>标签</p>
             <p>
               <Poptip trigger="hover" placement="left-end">
                 <a>Show</a>
@@ -168,8 +168,8 @@
       <Card id="pieChart" :padding="0" v-if="!this.contestID || OIContestRealTimePermission">
         <div slot="title">
           <Icon type="ios-analytics"></Icon>
-          <span class="card-title">Statistic</span>
-          <Button type="ghost" size="small" id="detail" @click="graphVisible = !graphVisible">Details</Button>
+          <span class="card-title">统计</span>
+          <Button type="ghost" size="small" id="detail" @click="graphVisible = !graphVisible">详情</Button>
         </div>
         <div class="echarts">
           <ECharts :options="pie"></ECharts>
@@ -182,7 +182,7 @@
         <ECharts :options="largePie" :initOptions="largePieInitOpts"></ECharts>
       </div>
       <div slot="footer">
-        <Button type="ghost" @click="graphVisible=false">Close</Button>
+        <Button type="ghost" @click="graphVisible=false">关闭</Button>
       </div>
     </Modal>
   </div>

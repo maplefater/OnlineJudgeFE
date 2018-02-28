@@ -11,7 +11,7 @@
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">All</Dropdown-item>
+                <Dropdown-item name="">全部</Dropdown-item>
                 <Dropdown-item name="OI">OI</Dropdown-item>
                 <Dropdown-item name="ACM">ACM</Dropdown-item>
               </Dropdown-menu>
@@ -23,10 +23,10 @@
                 <Icon type="arrow-down-b"></Icon>
               </span>
               <Dropdown-menu slot="list">
-                <Dropdown-item name="">All</Dropdown-item>
-                <Dropdown-item name="0">UnderWay</Dropdown-item>
-                <Dropdown-item name="1">Not Started</Dropdown-item>
-                <Dropdown-item name="-1">Ended</Dropdown-item>
+                <Dropdown-item name="">全部</Dropdown-item>
+                <Dropdown-item name="0">进行中</Dropdown-item>
+                <Dropdown-item name="1">未开始</Dropdown-item>
+                <Dropdown-item name="-1">已结束</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -36,7 +36,7 @@
           </li>
         </ul>
       </div>
-      <p id="no-contest" v-if="contests.length == 0">No contest</p>
+      <p id="no-contest" v-if="contests.length == 0">没有试卷</p>
       <ol id="contest-list">
         <li v-for="contest in contests">
           <Row type="flex" justify="space-between" align="middle">
