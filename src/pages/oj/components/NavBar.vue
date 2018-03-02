@@ -127,6 +127,14 @@
           this.changeModalStatus({visible: value})
         }
       }
+    },
+    watch: {
+      $route (to, from) {
+        if (window.top !== window) {
+          // in iframe
+          window.top.postMessage(window.location.pathname, '*')
+        }
+      }
     }
   }
 </script>
