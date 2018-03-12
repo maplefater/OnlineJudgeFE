@@ -295,7 +295,7 @@
           input_description: '',
           output_description: '',
           time_limit: 1000,
-          memory_limit: 256,
+          memory_limit: 512,
           difficulty: 'Low',
           visible: true,
           tags: [],
