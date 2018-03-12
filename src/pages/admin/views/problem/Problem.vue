@@ -297,7 +297,7 @@
           time_limit: 1000,
           memory_limit: 512,
           difficulty: 'Low',
-          visible: true,
+          visible: false,
           tags: [],
           languages: [],
           template: {},
