@@ -7,7 +7,7 @@ const state = {
   now: moment(),
   access: false,
   rankLimit: 30,
-  forceUpdate: false,
+  forceUpdate: true,
   contest: {
     created_by: {},
     contest_type: CONTEST_TYPE.PUBLIC

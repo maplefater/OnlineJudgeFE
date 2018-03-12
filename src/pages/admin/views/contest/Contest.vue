@@ -102,7 +102,7 @@
           end_time: '',
           rule_type: 'ACM',
           password: '',
-          real_time_rank: true,
+          real_time_rank: false,
           visible: true,
           allowed_ip_ranges: [{
             value: ''

@@ -14,7 +14,7 @@
           </p>
           <p>
             <span>自动刷新(10s)</span>
-            <i-switch :disabled="refreshDisabled" @on-change="handleAutoRefresh"></i-switch>
+            <i-switch @on-change="handleAutoRefresh"></i-switch>
           </p>
           <template v-if="isContestAdmin">
             <p>
@@ -23,7 +23,7 @@
             </p>
             <p>
               <span>强制更新</span>
-              <i-switch :disabled="refreshDisabled" v-model="forceUpdate"></i-switch>
+              <i-switch  v-model="forceUpdate"></i-switch>
             </p>
           </template>
         </div>

@@ -18,7 +18,7 @@ export default {
         offset,
         limit: this.limit,
         contest_id: this.$route.params.contestID,
-        force_refresh: this.forceUpdate ? '1' : '0'
+        force_refresh: '1'
       }
       api.getContestRank(params).then(res => {
         if (this.showChart && !refresh) {
@@ -92,7 +92,7 @@ export default {
     },
     forceUpdate: {
       get () {
-        return this.$store.state.contest.forceUpdate
+        return true
       },
       set (value) {
         this.$store.commit(types.CHANGE_RANK_FORCE_UPDATE, {value: value})
