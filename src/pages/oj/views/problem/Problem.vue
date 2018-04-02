@@ -55,15 +55,16 @@
         <Row type="flex" justify="space-between">
           <Col :span="10">
           <div class="status" v-if="statusVisible">
-            <template v-if="!this.contestID || (this.contestID && OIContestRealTimePermission)">
+            <!--<template v-if="!this.contestID || (this.contestID && OIContestRealTimePermission)">-->
+              <template>
               <span>Status:</span>
               <Tag type="dot" :color="submissionStatus.color" @click.native="handleRoute('/status/'+submissionId)">
                 {{submissionStatus.text}}
               </Tag>
             </template>
-            <template v-else-if="this.contestID && !OIContestRealTimePermission">
-              <Alert type="success" show-icon>提交成功</Alert>
-            </template>
+            <!--<template v-else-if="this.contestID && !OIContestRealTimePermission">-->
+              <!--<Alert type="success" show-icon>提交成功</Alert>-->
+            <!--</template>-->
           </div>
           <div v-else-if="problem.my_status === 0">
             <Alert type="success" show-icon>你已经通过该题</Alert>
