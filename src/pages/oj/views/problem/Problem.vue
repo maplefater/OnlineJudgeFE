@@ -399,13 +399,13 @@
             // 定时检查状态
             this.submitting = false
             this.submissionExists = true
-            if (!detailsVisible) {
-              this.$Modal.success({
-                title: 'Success',
-                content: '提交代码成功'
-              })
-              return
-            }
+            // if (!detailsVisible) {
+            //   this.$Modal.success({
+            //     title: 'Success',
+            //     content: '提交代码成功'
+            //   })
+            //   return
+            // }
             this.checkSubmissionStatus()
           }, res => {
             this.getCaptchaSrc()
@@ -417,7 +417,8 @@
           })
         }
 
-        if (this.contestRuleType === 'OI' && !this.OIContestRealTimePermission) {
+        // if (this.contestRuleType === 'OI' && !this.OIContestRealTimePermission) {
+        if (this.contestRuleType === 'whatever') {
           if (this.submissionExists) {
             this.$Modal.confirm({
               title: '',
